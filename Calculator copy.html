@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./Calculator.css">
+</head>
+
+<style>
+
+</style>
+<body>
+    <div id="cal_Frame" class="flex_container">
+        <div id="display_div">
+            <label for="display"><b>Display:</b></label><span id="more_span" onclick="_toggle(more_div,  item1sub_div)"> More Options</span>
+            <div id="more" >
+                <span id="close_more" onclick="_toggle(more_div,  item1sub_div)">x</span>
+                <div id="items">
+                    <div  class="more_item ">
+                        <div onclick="_toggle(item1sub_div)" class="item1 main_item">
+                            <p><i>&#8681;</i> Finance</p>
+                        </div>
+                        <div id="item1sub_div">
+                            <div class="item1sub" id="simple_interest">
+                            <p>Simple interest</p>
+                            </div>
+                            <div class="item1sub" id="compound_interest">
+                            <p>Compound interest</p>
+                            </div>
+                            <div class="item1sub" id="loan_repayment">
+                            <p>Loan repayment</p>
+                            </div>
+                            <div class="item1sub" id="savings">
+                            <p>Savings</p>
+                            </div>
+                            <div class="item1sub" id="fixed_deposit">
+                            <p>Fixed deposit</p>
+                            </div>
+                            <div class="item1sub" id="recurring_deposit">
+                            <p>Recurring deposit</p>
+                            </div>
+                            <div class="item1sub" id="sip_return">
+                            <p>SIP return</p>
+                            </div>
+                            <div class="item1sub" id="retirement_savings">
+                            <p>Retirement Savings</p>
+                            </div>
+                            <div class="item1sub" id="early_loan_payoff">
+                            <p>Early loan payoff</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="more_item">
+                        <div class="item2  main_item" onclick="open_item()"><p><i>&#8681;</i> Mathemathics</p></div>
+                    </div>
+                    <div  class="more_item" >
+                        <div class="item3  main_item" onclick="open_item()"><p><i>&#8681;</i> Construction</p></div>
+                    </div>
+                    <div  class="more_item" >
+                        <div class="item4  main_item" onclick="open_item()"><p><i>&#8681;</i> Date & Time</p></div>
+                    </div>
+                    <div  class="more_item" >
+                        <div class="item5  main_item" onclick="open_item()"><p><i>&#8681;</i> Unit Converter</p></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="display_Area">
+                <!--<input type="text" id="display_Result" dir="rtl" disabled readonly placeholder=":Result">-->
+                <p id="display_Result" dir="rtl" disabled readonly  contenteditable="false" 
+                onclick="toggle_Histroy()"> Tap to view history</p>
+                <!--<input type="text" id="display_Input" dir="rtl">-->
+                <p id="display_Input" dir="rtl" contenteditable="true"></p>
+            </div>
+            <div id="show_History" >
+            </div>
+        </div><br>
+        <div id="button_div">
+            <div id="button_numbers">
+                <button id="N1" onclick="display(1)">1</button>
+                <button id="N2" onclick="display(2)">2</button>
+                <button id="N3" onclick="display(3)">3</button>
+                <button id="N4" onclick="display(4)">4</button>
+                <button id="N5" onclick="display(5)">5</button>
+                <button id="N6" onclick="display(6)">6</button>
+                <button id="N7" onclick="display(7)">7</button>
+                <button id="N8" onclick="display(8)">8</button>
+                <button id="N9" onclick="display(9)">9</button>
+                <button id="N0" onclick="display(0)">0</button>
+                <button id="NP" onclick="display(`.`)">.</button>
+            </div>
+            <div id="button_operation">
+                <button id="N_add" onclick="display(`+`)">+</button>
+                <button id="N_subtract" onclick="display(`-`)">-</button>
+                <button id="N_divide" onclick="display(`/`)">&divide;</button>
+                <button id="N_multiply" onclick="display(`*`)">x</button>
+                <button id="N_percentage" onclick="display(`%`)">%</button>
+                <button id="N_root" onclick="">&#x221A</button>
+            </div>
+
+            <div id="button_command">
+            <button id="ac_btn" onclick="ac_btn()">AC</button>
+            <button id="equal" onclick="calculator()">&equals;</button>
+            <button id="history" onclick="toggle_Histroy()">History</button>
+            <button id="clear" onclick="clear_btn()">Clear</button>
+            
+        </div>
+        </div>
+
+    </div>
+</body>
+
+
+<script src="./Cal.js" type="text/javascript">
+    
+</script>
+
+</html>
