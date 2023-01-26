@@ -95,7 +95,7 @@ for(let i = 1; i < match.length; i += 2){
 }
 
 
-// Display the result
+// Display the result 
 if (result !== undefined) {
     alert("The result is: " + result);
 }
